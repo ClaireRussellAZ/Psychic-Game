@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" type="text/css" href="style.css"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+    <title>Number Guessing Game</title> 
+  
+    <style> 
+        html { 
+    font-family: fantasy; 
+    background-color: blueviolet;
+    } 
+
+        body { 
+    width: 50%; 
+    max-width: 500px; 
+    min-width: 380px; 
+    margin: 0 auto; 
+    
+    
+    }   
+    </style> 
+</head> 
+
+<body> 
+<h1>Guess what Number Princess is thinking</h1> 
+  
+<p>Princess the cat is thinking of a random number between 1 and 10. Try to guess it for her</p> 
+  
+<div class="form"> 
+    <label for="guessField">Enter a number: </label> 
+    <input type = "text" id = "guessField" class = "guessField"> 
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess"> 
+    <input type = "reset" value = "reset" />
+    <input type ="reset" value = "start over" />
+</div> 
+
+
+<p>
+    <div id="main-container" class="container">
+        <section class="main-section">
+          <h1>Java Game</h1>
+    
+          <div class="img">
+            <img src="PrincessCat.jpg" alt="Spoiled PrincessCat" width="500" height="333">
+    
+        </p>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses <span id="Losses">0</span></p>
+  
+<script type = "text/javascript"> 
+  
+    var y = Math.floor(Math.random() * 10 + 1); 
+      
+    var guess = 1; 
+      
+    document.getElementById("submitguess").onclick = function(){ 
+      
+   var x = document.getElementById("guessField").value; 
+  
+   if(x == y) 
+   {     
+       alert("Yay, you read her mind "
+               + guess + " GUESS ");
+               
+               
+   } 
+   else if(x > y)  
+   {     
+       guess++; 
+       alert("no!! guess again. Think small"); 
+   } 
+   else
+   { 
+       guess++; 
+       alert("WronG!! Think big") 
+       
+   } 
+} 
+</script> 
+</body> 
+</html>         
